@@ -1,0 +1,134 @@
+.price-list-container {
+  font-family: Arial, sans-serif;
+  color: #000;
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.car-item {
+  display: flex;
+  margin-bottom: 60px;
+  align-items: flex-start;
+  margin-top: 100px;
+}
+
+.car-info {
+  width: 35%;
+  padding-right: 30px;
+}
+
+.car-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.car-specs .car-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  text-transform: none;
+}
+
+.car-specs p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.car-variants {
+  width: 65%;
+  padding-top: 10px;
+}
+.variant-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  align-items: baseline;
+}
+
+.variant-row:first-child {
+  padding-top: 0;
+}
+.variant-name {
+  font-weight: bold;
+  font-size: 14px;
+  width: 50%;
+  padding-right: 10px;
+}
+
+.variant-price {
+  text-align: right;
+  width: 50%;
+}
+
+.price-main {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.price-promo {
+  display: block;
+  font-weight: bold;
+  font-size: 13px;
+  color: #000;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .car-item {
+    flex-direction: column;
+    margin-bottom: 40px;
+    border-bottom: 4px solid #f2f2f2;
+    padding-bottom: 30px;
+  }
+
+  .car-info,
+  .car-variants {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .car-info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .car-specs {
+    text-align: left;
+    padding: 0 10px;
+  }
+
+  .variant-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 10px;
+  }
+
+  .variant-name {
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+
+  .variant-price {
+    width: 100%;
+    text-align: left;
+  }
+
+  .price-main {
+    color: #c00;
+  }
+}

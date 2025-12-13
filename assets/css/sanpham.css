@@ -1,0 +1,257 @@
+:root {
+  --primary-color: #000;
+  --highlight-color: #c00;
+  --bg-light: #f8f9fa;
+  --text-gray: #666;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: #333;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+
+  padding: 60px 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-bottom: 80px;
+}
+
+.product-item {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+  min-width: 500px;
+}
+
+.product-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-color: rgba(204, 0, 0, 0.5);
+}
+
+.image-wrapper {
+  width: 100%;
+
+  height: 400px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.product-item:hover .product-image {
+  transform: scale(1.15);
+}
+
+.product-info {
+  padding: 30px 20px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-name {
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.product-slogan {
+  font-size: 18px;
+  color: var(--text-gray);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.product-price {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--highlight-color);
+  margin-bottom: 30px;
+  display: inline-block;
+  background: #fff5f5;
+  padding: 5px 20px;
+  border-radius: 30px;
+}
+
+.product-actions-links {
+  font-size: 16px;
+  color: #555;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.product-actions-links a {
+  text-decoration: none;
+  color: #555;
+  transition: all 0.3s;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+.product-actions-links a:hover {
+  color: var(--highlight-color);
+  border-bottom-color: var(--highlight-color);
+}
+.separator {
+  color: #ddd;
+}
+
+.consultation-section {
+  background: linear-gradient(145deg, #111, #333);
+  color: #fff;
+  padding: 60px;
+  border-radius: 20px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.form-title {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.form-subtitle {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.form-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.form-group-half {
+  flex: 1;
+  text-align: left;
+}
+.form-group-full {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.form-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ccc;
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #555;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.form-input:focus,
+.form-select:focus {
+  border-color: var(--highlight-color);
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+.form-select option {
+  color: #000;
+}
+
+.btn-submit {
+  background: var(--highlight-color);
+  color: #fff;
+  padding: 18px 70px;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  margin-top: 35px;
+}
+.btn-submit:hover {
+  transform: translateY(-5px);
+  background: #e60000;
+  box-shadow: 0 10px 20px rgba(204, 0, 0, 0.4);
+}
+
+@media (max-width: 1400px) {
+  .image-wrapper {
+    height: 320px;
+  }
+  .product-name {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .container {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .image-wrapper {
+    height: 260px;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .consultation-section {
+    padding: 40px 20px;
+    border-radius: 0;
+  }
+}

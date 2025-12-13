@@ -1,0 +1,95 @@
+.main-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #000;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+.grid-banner {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(500px, auto);
+  margin-bottom: 0px;
+  overflow: hidden;
+}
+.grid-banner > * {
+  grid-area: 1 / 1 / -1 / -1;
+}
+.banner-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.6)
+  );
+}
+.banner-content {
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+.banner-content h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.banner-content .subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-style: italic;
+  opacity: 0.9;
+}
+.banner-content .description {
+  font-size: 1rem;
+  max-width: 800px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.banner-content .quote {
+  font-style: italic;
+  font-weight: 300;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 15px;
+  margin-top: 10px;
+}
+
+.bold-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .grid-banner {
+    grid-template-rows: minmax(400px, auto);
+  }
+  .banner-content h2 {
+    font-size: 1.5rem;
+  }
+  .badge-title {
+    font-size: 1.1rem;
+  }
+}
