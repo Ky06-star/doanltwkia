@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif; /* Font chữ giống trong ảnh */
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
@@ -11,7 +11,6 @@ body {
   padding: 0 15px;
 }
 
-/* --- Banner --- */
 .contact-banner {
   width: 100%;
   overflow: hidden;
@@ -21,12 +20,11 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  min-height: 200px; /* Chiều cao tối thiểu nếu chưa có ảnh */
-  background-color: #ddd; /* Màu nền giữ chỗ nếu chưa có ảnh */
+  min-height: 200px;
+  background-color: #ddd;
   margin-top: 80px;
 }
 
-/* --- Tiêu đề --- */
 .section-header {
   text-align: center;
   margin: 40px 0;
@@ -35,10 +33,10 @@ body {
 .section-header .title {
   font-size: 24px;
   font-weight: bold;
-  text-transform: lowercase; /* Chữ thường giống ảnh, hoặc dùng capitalize */
+  text-transform: lowercase;
   margin-bottom: 10px;
 }
-/* Ép chữ cái đầu viết hoa nếu muốn giống hệt ảnh "kết nối với chúng tôi" */
+
 .section-header .title::first-letter {
   text-transform: uppercase;
 }
@@ -50,42 +48,40 @@ body {
   margin: 0;
 }
 
-/* --- Form --- */
 .contact-form {
-  max-width: 900px; /* Giới hạn chiều rộng form */
+  max-width: 900px;
   margin: 0 auto 60px auto;
 }
 
 .form-row {
   display: flex;
   margin-bottom: 15px;
-  align-items: flex-start; /* Căn hàng theo cạnh trên */
+  align-items: flex-start;
 }
 
 .form-label {
-  width: 20%; /* Nhãn chiếm 20% chiều rộng */
-  padding-top: 10px; /* Căn chỉnh chữ ngang hàng với input */
+  width: 20%;
+  padding-top: 10px;
   font-weight: bold;
   font-size: 14px;
   color: #333;
 }
 
 .form-input {
-  width: 80%; /* Input chiếm 80% */
+  width: 80%;
 }
 
 .required {
-  color: #333; /* Dấu sao màu đen */
+  color: #333;
 }
 
-/* Style cho các ô input và select */
 .form-input input,
 .form-input select,
 .form-input textarea {
   width: 100%;
   padding: 10px 12px;
   border: 1px solid #ccc;
-  background-color: #dcdcdc; /* Màu nền xám giống ảnh */
+  background-color: #dcdcdc;
   font-size: 14px;
   outline: none;
   color: #555;
@@ -98,17 +94,15 @@ body {
   border-color: #999;
 }
 
-/* Xử lý dòng có 2 input (Họ/Tên, Email/SĐT) */
 .input-dual {
   display: flex;
-  gap: 20px; /* Khoảng cách giữa 2 ô input */
+  gap: 20px;
 }
 
 .input-dual input {
-  width: 50%; /* Mỗi ô chiếm 1 nửa */
+  width: 50%;
 }
 
-/* Nút Gửi */
 .form-submit {
   text-align: center;
   margin-top: 20px;
@@ -130,10 +124,9 @@ body {
   background-color: #333;
 }
 
-/* --- RESPONSIVE (Giao diện Mobile) --- */
 @media (max-width: 768px) {
   .form-row {
-    flex-direction: column; /* Chuyển thành cột dọc trên mobile */
+    flex-direction: column;
   }
 
   .form-label {
@@ -147,7 +140,7 @@ body {
   }
 
   .input-dual {
-    flex-direction: column; /* 2 ô input xếp chồng lên nhau trên mobile nhỏ */
+    flex-direction: column;
     gap: 10px;
   }
 
